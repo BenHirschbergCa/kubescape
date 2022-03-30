@@ -22,7 +22,7 @@ RUN python build.py
 
 RUN ls -ltr build/ubuntu-latest
 
-FROM alpine
+FROM alpine:3.15.3
 COPY --from=builder /work/build/ubuntu-latest/kubescape /usr/bin/kubescape
 
 # # Download the frameworks. Use the "--use-default" flag when running kubescape
